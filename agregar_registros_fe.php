@@ -254,18 +254,18 @@
             var marcaSelect = document.getElementById('marca_select');
 
             // Deshabilitar el select y seleccionar la opción "Generico" al cargar la página
-            marcaSelect.disabled = true;
+            marcaSelect.readonly = true;
             marcaSelect.value = 'generico';
 
             // Agregar un listener al checkbox
             marcaCheck.addEventListener('change', function() {
             if (marcaCheck.checked) {
                 // Si el checkbox está marcado, habilitar el select y limpiar el valor seleccionado
-                marcaSelect.disabled = false;
+                marcaSelect.readonly = false;
                 marcaSelect.selectedIndex = 0;
             } else {
                 // Si el checkbox está desmarcado, deshabilitar el select y seleccionar la opción "Generico"
-                marcaSelect.disabled = true;
+                marcaSelect.readonly = true;
                 marcaSelect.value = 'generico';
             }
             });
@@ -277,15 +277,15 @@
 
             // establecer valor inicial y deshabilitar input
             inputModelo.value = 'Generico';
-            inputModelo.disabled = true;
+            inputModelo.readonly = true;
 
             // agregar un event listener al checkbox para habilitar/deshabilitar el input
             checkbox.addEventListener('change', function() {
                 if (this.checked) {
-                    inputModelo.disabled = false;
+                    inputModelo.readonly = false;
                     inputModelo.value = '';
                 } else {
-                    inputModelo.disabled = true;
+                    inputModelo.readonly = true;
                     inputModelo.value = 'Generico';
                 }
             });
@@ -297,15 +297,15 @@
 
             // establecer valor inicial y deshabilitar input
             inputSerie.value = 'Generico';
-            inputSerie.disabled = true;
+            inputSerie.readonly = true;
 
             // agregar un event listener al seriebox para habilitar/deshabilitar el input
             seriebox.addEventListener('change', function() {
                 if (this.checked) {
-                    inputSerie.disabled = false;
+                    inputSerie.readonly = false;
                     inputSerie.value = '';
                 } else {
-                    inputSerie.disabled = true;
+                    inputSerie.readonly = true;
                     inputSerie.value = 'Generico';
                 }
             });
@@ -314,16 +314,16 @@
         <script>
         $(document).ready(function() {
         // Deshabilitar los inputs al cargar la página
-        $('#fecha_compra, #orden_compra').prop('disabled', true);
+        $('#fecha_compra, #orden_compra').prop('readonly', true);
 
         // Detectar cambios en el checkbox
         $('#fecha_compra-check').change(function() {
             if ($(this).is(':checked')) {
             // Habilitar los inputs si el checkbox está marcado
-            $('#fecha_compra, #orden_compra').prop('disabled', false);
+            $('#fecha_compra, #orden_compra').prop('readonly', false);
             } else {
             // Deshabilitar los inputs si el checkbox no está marcado
-            $('#fecha_compra, #orden_compra').prop('disabled', true);
+            $('#fecha_compra, #orden_compra').prop('readonly', true);
             // Establecer el valor del input date en blanco
             $('#fecha_compra').val('');
             }
