@@ -1,0 +1,57 @@
+form {
+    max-width: 800px;
+    margin: 0 auto;
+    background-color: #f9f9f9;
+    padding: 20px;
+    border: 2px solid #ccc;
+    border-radius: 5px;
+  }
+  
+  label {
+    font-size: 16px;
+    display: inline-block;
+    position: relative;
+    width: 30%; /* Ancho fijo para las etiquetas */
+    margin-bottom: 5px;
+    vertical-align: top; /* Alinear la parte superior de las etiquetas con la parte superior de los campos de entrada */
+    margin-top: 14px;
+  }
+  
+  input[type="text"]{
+    display: inline-block;
+    width: 48%; /* Ancho fijo para los campos de entrada */
+    padding: 10px;
+    border: 2px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    margin-bottom: 10px;
+    vertical-align: top; /* Alinear la parte superior de los campos de entrada con la parte superior de las etiquetas */
+  }
+
+  input[type="checkbox"]{
+    display: inline-block;
+    position: absolute;
+    margin-top: 14px;
+    padding-right: 50px;
+  }
+  
+  button {
+    display: block;
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+  }
+  
+  button:hover {
+    background-color: #45a049;
+  }
+  
+  input:focus,
+  textarea:focus {
+    outline: none;
+    border-color: #4CAF50;
+  }
